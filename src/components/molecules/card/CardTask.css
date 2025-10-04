@@ -1,5 +1,9 @@
 .card-task {
     cursor: grab;
+    background: #ebf2f5;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    box-shadow: none;
 }
 
 .card-users {

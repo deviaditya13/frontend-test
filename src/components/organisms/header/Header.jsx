@@ -1,46 +1,59 @@
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonRow, IonLabel, IonCol, IonGrid, IonIcon } from '@ionic/react';
+import { IonToolbar, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
 import Button from '../../atoms/button/button';
 import SearchBar from '../../atoms/input/searchBar';
-import { personAddOutline } from 'ionicons/icons';
-import UserAvatars from '../../atoms/user/UserAvatar';
-import { lockClosed, chevronDown, filter, globeOutline } from 'ionicons/icons';
+import AvatarGroup from '../../molecules/user/AvatarGroup';
+import { lockClosed, chevronDown, filter, globeOutline, personAddOutline } from 'ionicons/icons';
 
-const Header = () =>  { 
+const Header = () => { 
+    const users = [
+        { id: 1, name: 'Alice', avatar: 'https://i.pravatar.cc/40?img=1' },
+        { id: 2, name: 'Bob', avatar: 'https://i.pravatar.cc/40?img=2' },
+        { id: 3, name: 'Alice', avatar: 'https://i.pravatar.cc/40?img=1' },
+        { id: 4, name: 'Bob', avatar: 'https://i.pravatar.cc/40?img=2' },
+        { id: 5, name: 'Alice', avatar: 'https://i.pravatar.cc/40?img=1' },
+        { id: 6, name: 'Bob', avatar: 'https://i.pravatar.cc/40?img=2' },
+        { id: 7, name: 'Alice', avatar: 'https://i.pravatar.cc/40?img=1' },
+        { id: 8, name: 'Bob', avatar: 'https://i.pravatar.cc/40?img=2' },
+    ];
 
     return ( 
-        <IonPage>
-            <IonContent>
-                <IonToolbar className='h-18 border-b py-2'>
-                    <IonGrid>
-                        <IonRow class='justify-between'>
-                            <div className='flex items-center'>
-                                <div>
-                                    <IonIcon icon={lockClosed} />
-                                    <span className="text-lg px-2">Adhivasindo</span>
-                                    <IonIcon icon={chevronDown} />
-                                </div>
-                                <div className="px-4">
-                                    <UserAvatars />
-                                </div>
-                                <Button label="Invite" icon={personAddOutline} />
+        <IonToolbar className='h-18 border-b py-2 px-8'>
+            <IonGrid>
+                <IonRow className='justify-between items-center'>
+                    <IonCol size="auto">
+                        <div className='flex items-center gap-4'>
+                            <div className='flex items-center gap-1 cursor-pointer'>
+                                <IonIcon icon={lockClosed} />
+                                <p className="text-lg">Adhivasindo</p>
+                                <IonIcon icon={chevronDown} />
                             </div>
-                            <div className="flex items-center justify-end gap-4 text-lg">
-                                <div className='flex items-center mr-4 cursor-pointer'>
-                                    <IonIcon icon={filter} />
-                                    <span className="ml-2">Filter</span>
-                                </div>
-                                <div className='flex items-center mr-2 cursor-pointer'>
-                                    <IonIcon icon={globeOutline} />
-                                    <span className="ml-1">Export/Import</span>
-                                </div>
-                                <SearchBar />
+                            <AvatarGroup users={users} />
+                            <Button 
+                                label="Invite" 
+                                icon={personAddOutline} 
+                                onClick={() => console.log('Klik')} 
+                                style={{ '--background': '#e0ecf9', '--color': '#000', '--border-radius': '8px', height: '36px', padding: '0 12px' }}
+                            />
+                        </div>
+                    </IonCol>
+
+                    <IonCol size="auto">
+                        <div className="flex text-[18px] items-center gap-8">
+                            <div className='flex items-center gap-1 cursor-pointer'>
+                                <IonIcon icon={filter} />
+                                <span>Filter</span>
                             </div>
-                        </IonRow>
-                    </IonGrid>
-                </IonToolbar>
-            </IonContent>
-        </IonPage>
-    )
+                            <div className='flex items-center gap-1 cursor-pointer'>
+                                <IonIcon icon={globeOutline} />
+                                <span>Export/Import</span>
+                            </div>
+                            <SearchBar />
+                        </div>
+                    </IonCol>
+                </IonRow>
+            </IonGrid>
+        </IonToolbar>
+    );
 }
 
-export default Header
+export default Header;

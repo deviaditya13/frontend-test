@@ -1,0 +1,9 @@
+ion-progress-bar.progress-bar { 
+    --background: #e0e0e0;
+    --progress-background: #6784ba;
+}
+
+ion-progress-bar.full-green {
+    --background: #c8e6c9;         
+    --progress-background: #4caf50;
+}

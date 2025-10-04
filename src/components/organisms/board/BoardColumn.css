@@ -1,6 +1,6 @@
 .column {
-    flex: 0 0 250px;
-    background: #f4f4f4;
+    min-width: 420px;
+    /* background-color: #f4f4f4; */
     border-radius: 8px;
     padding: 8px;
     display: flex;

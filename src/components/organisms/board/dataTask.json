@@ -1,0 +1,129 @@
+{
+  "columns": {
+    "todo": {
+      "title": "To Do",
+      "tasks": [
+        {
+          "id": "1",
+          "title": "Design UI",
+          "type": "feature",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+          "users": [
+            { "name": "User A", "avatar": "https://i.pravatar.cc/40?img=1" },
+            { "name": "User B", "avatar": "https://i.pravatar.cc/40?img=2" }
+          ],
+          "image": "https://t3.ftcdn.net/jpg/03/99/32/60/360_F_399326002_eSSjVeK5yxITN0fe8cWJ842HX1DNqj0K.jpg",
+          "value": 0.0,
+          "date": "1 Aug"
+        },
+        {
+          "id": "2",
+          "title": "Setup Project",
+          "type": "issue",
+          "description": "Inisialisasi project React + Ionic serta konfigurasi environment",
+          "users": [
+            { "name": "User B", "avatar": "https://i.pravatar.cc/40?img=2" }
+          ],
+          "image": "",
+          "value": 0.1,
+          "date": "2 Aug"
+        },
+        {
+          "id": "3",
+          "title": "Project Plan",
+          "type": "bug",
+          "description": "Perbaikan pada dokumen perencanaan proyek karena ada data yang salah",
+          "users": [
+            { "name": "User D", "avatar": "https://i.pravatar.cc/40?img=4" }
+          ],
+          "image": "https://t3.ftcdn.net/jpg/03/99/32/60/360_F_399326002_eSSjVeK5yxITN0fe8cWJ842HX1DNqj0K.jpg",
+          "value": 0.6,
+          "date": "7 Aug"
+        },
+        {
+          "id": "4",
+          "title": "Design UI",
+          "type": "issue",
+          "description": "Review desain halaman login agar konsisten dengan style guide",
+          "users": [
+            { "name": "User A", "avatar": "https://i.pravatar.cc/40?img=1" },
+            { "name": "User C", "avatar": "https://i.pravatar.cc/40?img=3" }
+          ],
+          "image": "",
+          "value": 0.7,
+          "date": "5 Aug"
+        }
+      ]
+    },
+    "doing": {
+      "title": "Doing",
+      "tasks": [
+        {
+          "id": "5",
+          "title": "Design UI",
+          "type": "issue",
+          "description": "Melanjutkan pembuatan halaman dashboard agar responsif di semua ukuran layar",
+          "users": [
+            { "name": "User A", "avatar": "https://i.pravatar.cc/40?img=1" },
+            { "name": "User B", "avatar": "https://i.pravatar.cc/40?img=2" }
+          ],
+          "image": "https://t3.ftcdn.net/jpg/03/99/32/60/360_F_399326002_eSSjVeK5yxITN0fe8cWJ842HX1DNqj0K.jpg",
+          "value": 0.4,
+          "date": "3 Aug"
+        }
+      ]
+    },
+    "review": {
+      "title": "Review",
+      "tasks": [
+        {
+          "id": "6",
+          "title": "Design UI",
+          "type": "issue",
+          "description": "Review desain halaman login agar konsisten dengan style guide",
+          "users": [
+            { "name": "User A", "avatar": "https://i.pravatar.cc/40?img=1" },
+            { "name": "User C", "avatar": "https://i.pravatar.cc/40?img=3" }
+          ],
+          "image": "",
+          "value": 0.7,
+          "date": "5 Aug"
+        }
+      ]
+    },
+    "rework": {
+      "title": "Rework",
+      "tasks": [
+        {
+          "id": "7",
+          "title": "Project Plan",
+          "type": "bug",
+          "description": "Perbaikan pada dokumen perencanaan proyek karena ada data yang salah",
+          "users": [
+            { "name": "User D", "avatar": "https://i.pravatar.cc/40?img=4" }
+          ],
+          "image": "https://t3.ftcdn.net/jpg/03/99/32/60/360_F_399326002_eSSjVeK5yxITN0fe8cWJ842HX1DNqj0K.jpg",
+          "value": 0.6,
+          "date": "7 Aug"
+        }
+      ]
+    },
+    "done": {
+      "title": "Done",
+      "tasks": [
+        {
+          "id": "8",
+          "title": "Project Plan",
+          "type": "bug",
+          "description": "Dokumen rencana proyek sudah selesai direvisi dan disetujui",
+          "users": [
+            { "name": "User B", "avatar": "https://i.pravatar.cc/40?img=2" }
+          ],
+          "image": "https://t3.ftcdn.net/jpg/03/99/32/60/360_F_399326002_eSSjVeK5yxITN0fe8cWJ842HX1DNqj0K.jpg",
+          "value": 1.0,
+          "date": "8 Aug"
+        }
+      ]
+    }
+  }
+}

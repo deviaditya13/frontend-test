@@ -1,21 +1,13 @@
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/react';
+import { IonPage, IonContent } from '@ionic/react';
 import Header from '../organisms/header/Header';
-import KanbanBoard from '../organisms/board/KanbanBoard';
+import LayoutBoard from '../organisms/board/LayoutBoard';
 
 export default function Home() {
   return (
-    <IonPage>
-      {/* <IonHeader>
-        <IonToolbar>
-          <IonTitle>Halaman Home</IonTitle>
-        </IonToolbar>
-      </IonHeader> */}
+    <IonPage style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <Header />
       <IonContent className="ion-padding">
-        <h2>Selamat datang di Ionic React 🚀</h2>
-        <IonContent>
-          <KanbanBoard />
-        </IonContent>
+        <LayoutBoard />
       </IonContent>
     </IonPage>
   );

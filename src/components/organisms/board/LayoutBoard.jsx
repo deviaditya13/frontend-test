@@ -1,31 +1,10 @@
 import React, { useState } from 'react';
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext } from '@hello-pangea/dnd';
 import BoardColumn from './BoardColumn';
-import './KanbanBoard.css';
+import './LayoutBoard.css';
+import dataTask from './dataTask.json'
 
-const initialData = {
-    columns: {
-        todo: {
-        title: 'To Do',
-        tasks: [
-            { id: 'task-1', title: 'Design UI', users: ['Alice', 'Bob'] },
-            { id: 'task-2', title: 'Setup Project', users: ['Charlie'] },
-        ],
-        },
-        'in-progress': {
-        title: 'In Progress',
-        tasks: [
-            { id: 'task-3', title: 'Develop Login', users: ['Alice'] },
-        ],
-        },
-        done: {
-        title: 'Done',
-        tasks: [
-            { id: 'task-4', title: 'Project Plan', users: ['Bob'] },
-        ],
-        },
-    },
-};
+const initialData = dataTask 
 
 const KanbanBoard = () => {
     const [columns, setColumns] = useState(initialData.columns);

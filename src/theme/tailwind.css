@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@layer base {
+  ion-content {
+    --padding-start: 2rem;
+    --padding-end: 2rem;
+  }
+}

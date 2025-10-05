@@ -1,4 +1,4 @@
-import { IonButton, IonIcon, IonSpinner } from '@ionic/react';
+import { IonButton, IonIcon } from '@ionic/react';
 import PropTypes from 'prop-types';
 
 const Button = ({

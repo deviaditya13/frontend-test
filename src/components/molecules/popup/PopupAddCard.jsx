@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IonModal, IonIcon } from '@ionic/react';
 import Dropdown from '../../atoms/input/Dropdown';
 import Input from '../../atoms/input/Input';
 import AvatarGroup from '../user/AvatarGroup';
-import { close, image } from 'ionicons/icons';
+import { close } from 'ionicons/icons';
 import Button from '../../atoms/button/button';
 
-const PopupAddCard = ({ openPopup, onClose }) => {
-    const handleSelect = () => {}
+const PopupAddCard = ({ openPopup, onClose, onSave }) => {
+    const handleSelect = () => {};
 
     const users = [
         { id: 1, name: 'User A', avatar: 'https://i.pravatar.cc/40?img=1' },
         { id: 2, name: 'User B', avatar: 'https://i.pravatar.cc/40?img=2' },
         { id: 3, name: 'User C', avatar: 'https://i.pravatar.cc/40?img=3' },
         { id: 4, name: 'User D', avatar: 'https://i.pravatar.cc/40?img=4' },
-    ]
+    ];
 
     return (
         <IonModal isOpen={openPopup} onDidDismiss={onClose}>
@@ -25,10 +25,6 @@ const PopupAddCard = ({ openPopup, onClose }) => {
                         <IonIcon icon={close} className='mt-2'/>
                     </div>
                 </div>
-                {/* <div className='border-b'>
-                    <IonIcon icon={image} className='mt-2' style={{ color: '#EBF2F5' }}/>
-                    <p>Add Cover</p>
-                </div> */}
                 <p className="!text-2xl font-bold">CRUD Employee</p>
                 <div className='flex w-full gap-4 mb-4'>
                     <div className='flex flex-col gap-4 w-full'>
@@ -38,58 +34,58 @@ const PopupAddCard = ({ openPopup, onClose }) => {
                         </div>
                         <div>
                             <Dropdown
-                            label="Board"
-                            options={['Board A', 'Board B', 'Board C']}
-                            onSelect={handleSelect}
+                                label="Board"
+                                options={['Board A', 'Board B', 'Board C']}
+                                onSelect={handleSelect}
                             />
                         </div>
                         <div>
                             <Dropdown
-                            label="Column"
-                            options={['Column 1', 'Column 2', 'Column 3']}
-                            onSelect={handleSelect}
+                                label="Column"
+                                options={['Column 1', 'Column 2', 'Column 3']}
+                                onSelect={handleSelect}
                             />
                         </div>
                     </div>
                     <div className='flex flex-col gap-4 w-full'>
                         <div>
                             <Dropdown
-                            label="Due Date"
-                            options={['Today', 'Tomorrow', 'Next Week']}
-                            onSelect={handleSelect}
+                                label="Due Date"
+                                options={['Today', 'Tomorrow', 'Next Week']}
+                                onSelect={handleSelect}
                             />
                         </div>
                         <div>
                             <Dropdown
-                            label="To Do"
-                            options={['Task 1', 'Task 2', 'Task 3']}
-                            onSelect={handleSelect}
+                                label="To Do"
+                                options={['Task 1', 'Task 2', 'Task 3']}
+                                onSelect={handleSelect}
                             />
                         </div>
                         <div>
                             <Dropdown
-                            label="Priority"
-                            options={['High', 'Medium', 'Low']}
-                            onSelect={handleSelect}
+                                label="Priority"
+                                options={['High', 'Medium', 'Low']}
+                                onSelect={handleSelect}
                             />
                         </div>
                     </div>
                 </div>
                 <div className='mb-4'>
-                    <Input 
-                        label="Deskripsi" 
-                        type='text'
-                    />
+                    <Input label="Deskripsi" type='text' />
                 </div>
                 <div>
-                    <Input 
-                        label="Attachments" 
-                        type='file'
-                    />
+                    <Input label="Attachments" type='file' />
                 </div>
                 <div className='flex justify-end mt-4 gap-4'>
-                    <Button label="Discard" />
-                    <Button label="Save" style={{ '--background': "#4E7EE4", "--font": "bold" }} />
+                    <Button label="Discard" onClick={onClose} />
+                    <Button 
+                        label="Save" 
+                        style={{ '--background': "#4E7EE4", "--font": "bold" }} 
+                        onClick={() => {
+                            if(onSave) onSave();
+                        }}
+                    />
                 </div>
             </div>
         </IonModal>

@@ -1,5 +1,5 @@
 import Avatar from '../../atoms/user/Avatar';
-import './AvatarGroup.css';
+import '../../../assets/css/AvatarGroup.css';
 
 const UserAvatars = ({ users, style = {} }) => {
   const maxVisible = 5; 

@@ -1,6 +1,6 @@
 import { Droppable, Draggable } from '@hello-pangea/dnd';
 import CardTask from '../../molecules/card/CardTask';
-import './BoardColumn.css';
+import '../../../assets/css/BoardColumn.css';
 import Button from '../../atoms/button/button';
 import { add, ellipsisVertical, chevronExpand } from 'ionicons/icons';
 import { IonIcon } from '@ionic/react';
@@ -20,9 +20,8 @@ const BoardColumn = ({ columnId, title, tasks, updateColumnTasks }) => {
     const handleSaveCard = () => {
         const newCard = {
             id: Date.now().toString(),
-            title: '',
+            title: 'Ini card task baru',
             type: 'feature',
-            description: 'Ini card task baru',
             users: [{ name: "User D", avatar: "https://i.pravatar.cc/40?img=4" }],
             image: 'https://t3.ftcdn.net/jpg/03/99/32/60/360_F_399326002_eSSjVeK5yxITN0fe8cWJ842HX1DNqj0K.jpg',
             value: 0.0,

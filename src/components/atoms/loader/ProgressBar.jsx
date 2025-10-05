@@ -1,5 +1,5 @@
 import { IonProgressBar } from "@ionic/react"
-import './ProgressBar.css'
+import '../../../assets/css/ProgressBar.css'
 
 const ProgressBar = ({value, style = {}}) => { 
     return ( 

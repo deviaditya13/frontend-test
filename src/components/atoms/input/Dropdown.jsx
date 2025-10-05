@@ -4,12 +4,6 @@ const Dropdown = ({ label = '', options = [], onSelect }) => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => setOpen(!open);
-
-//   const handleSelect = (option) => {
-//     onSelect && onSelect(option);
-//     setOpen(false);
-//   };
-
   return (
     <div className="relative inline-block w-full">
         <p className='text-[16px] font-semibold mb-1'>{label}</p>
@@ -25,7 +19,6 @@ const Dropdown = ({ label = '', options = [], onSelect }) => {
             {options.map((opt, idx) => (
                 <div
                 key={idx}
-                // onClick={() => handleSelect(opt)}
                 className="px-3 py-2 hover:bg-gray-100 cursor-pointer"
                 >
                 {opt}

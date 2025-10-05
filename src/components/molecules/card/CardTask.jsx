@@ -1,6 +1,6 @@
 import { IonCard, IonCardContent, IonImg, IonRow } from '@ionic/react';
 import AvatarGroup from '../../molecules/user/AvatarGroup';
-import './CardTask.css';
+import '../../../assets/css/CardTask.css';
 import Chip from '../../atoms/chip/Chip';
 import ProgressBar from '../../atoms/loader/ProgressBar';
 
@@ -13,9 +13,11 @@ const CardTask = ({ task }) => {
             )}
             <Chip label={task.type} style={{ marginBottom: "16px" }}/>
             <ProgressBar value={task.value} style={{ marginBottom: "16px" }}/>
-            <p className='!text-[16px]'>{task.description}</p>
+            <p className='!text-[16px]'>{task.title}</p>
             <IonRow style={{ marginTop: "16px" }}>
-                <Chip label={task.date} isDate/>
+                <div className='h-[10px] mt-1'>
+                    <Chip label={task.date} isDate />
+                </div>
                 <AvatarGroup users={task.users} style={{ marginLeft: 'auto' }} />
             </IonRow>
         </IonCardContent>

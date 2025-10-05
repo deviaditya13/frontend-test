@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DragDropContext } from '@hello-pangea/dnd';
 import BoardColumn from './BoardColumn';
-import './LayoutBoard.css';
+import '../../../assets/css/LayoutBoard.css';
 import dataTask from './dataTask.json';
 
 const LayoutBoard = () => {
